@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AutoUpdateApplecation.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ChartUpdate_webserver_Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://webserver.ytb18.cn/NeiBuChart.asmx</Value>
+    </Setting>
+    <Setting Name="AutoUpdateApplecation_UpdateService_AutoUpdateService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://42.96.160.139:8013/AutoUpdateService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

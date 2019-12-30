@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CEADF71-8032-47FE-A357-D6F4023261CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ezhu.AutoUpdater</RootNamespace>
+    <AssemblyName>AutoUpdater</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Ezhu.AutoUpdater.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>download.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>snkKeyUpdate.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Common.Logging.3.0.0\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.3.3.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Quartz.2.3.3\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ConfigManage.cs" />
+    <Compile Include="Base\WindowBase.cs" />
+    <Compile Include="Lib\Constants.cs" />
+    <Compile Include="Lib\ICCEmbedded\Checksums\Adler32.cs" />
+    <Compile Include="Lib\ICCEmbedded\Checksums\CRC32.cs" />
+    <Compile Include="Lib\ICCEmbedded\Checksums\IChecksum.cs" />
+    <Compile Include="Lib\ICCEmbedded\Core\FileSystemScanner.cs" />
+    <Compile Include="Lib\ICCEmbedded\Core\INameTransform.cs" />
+    <Compile Include="Lib\ICCEmbedded\Core\IScanFilter.cs" />
+    <Compile Include="Lib\ICCEmbedded\Core\NameFilter.cs" />
+    <Compile Include="Lib\ICCEmbedded\Core\PathFilter.cs" />
+    <Compile Include="Lib\ICCEmbedded\Core\StreamUtils.cs" />
+    <Compile Include="Lib\ICCEmbedded\Encryption\PkzipClassic.cs" />
+    <Compile Include="Lib\ICCEmbedded\SharpZipBaseException.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\Deflater.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\Inflater.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\FastZip.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\IEntryFactory.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipConstants.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipEntry.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipEntryFactory.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipException.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipExtraData.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipFile.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipHelperStream.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipNameTransform.cs" />
+    <Compile Include="Lib\ICCEmbedded\Zip\ZipOutputStream.cs" />
+    <Compile Include="Lib\IniClass.cs" />
+    <Compile Include="Lib\QuartzManager.cs" />
+    <Compile Include="Lib\UpdateInfo.cs" />
+    <Compile Include="Lib\Updater.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="UI\AlertWin.xaml.cs">
+      <DependentUpon>AlertWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DownFileProcess.xaml.cs">
+      <DependentUpon>DownFileProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commons\EncodeHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="snkKeyUpdate.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\Black\Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\Black\WindowBaseStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\AlertWin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\DownFileProcess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="download.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\C5.dll" />
+    <Content Include="DLL\Common.Logging.dll" />
+    <Content Include="DLL\Quartz.dll" />
+    <Content Include="DLL\Quartz_StrongName.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

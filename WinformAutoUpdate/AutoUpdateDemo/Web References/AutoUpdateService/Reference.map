@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://42.96.160.139:8013/autoupdateservice.asmx?wsdl" filename="autoupdateservice.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://42.96.160.139:8013/autoupdateservice.asmx?disco" filename="autoupdateservice.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

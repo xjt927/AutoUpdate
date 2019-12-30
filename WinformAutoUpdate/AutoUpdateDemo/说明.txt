@@ -1,0 +1,6 @@
+AutoUpdateDemo 为使用实例
+AutoUpdateSolution 为升级程序客户端
+AutoUpdate.WebSite 为升级程序服务端
+
+每一个更新节点都需要创建一个 "Web服务（asmx）",
+同时修改web配置文件.
